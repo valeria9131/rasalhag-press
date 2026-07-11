@@ -1,1 +1,13 @@
-
+{
+  "project": "rasalhag-press",
+  "version": "1.0.0",
+  "collections": [
+    {
+      "id": "collection-001",
+      "name": "Example Collection",
+      "status": "draft",
+      "items_count": 0,
+      "date_added": "2026-07-11"
+    }
+  ]
+}
