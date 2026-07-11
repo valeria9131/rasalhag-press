@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aria Vance | Fine Line Coloring Book Portfolio</title>
   
   <!-- Premium Google Fonts -->
@@ -12,7 +12,6 @@
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
   <script>
     tailwind.config = {
       theme: {
@@ -25,117 +24,149 @@
       }
     }
   </script>
+  
   <style>
-    /* Elegant line overlay styling simulating fine cotton texture */
-    .bg-gallery {
-      background-color: #FAF9F6;
+    /* Custom thin scrollbar for high-end aesthetic */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FDFCFB;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #E5E2DD;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #D1CCC5;
     }
   </style>
 </head>
-<body class="min-h-screen bg-gallery text-neutral-800 font-sans selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden">
+<body class="min-h-screen bg-[#FDFCFB] text-[#1C1C1C] font-sans antialiased selection:bg-[#E5E2DD] selection:text-[#1C1C1C] overflow-x-hidden">
 
   <!-- Header / Navigation -->
-  <header class="sticky top-0 z-40 bg-gallery/90 backdrop-blur-md border-b border-neutral-200/40">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <div class="flex flex-col cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-        <span class="font-serif text-xl tracking-[0.25em] text-neutral-900 font-medium uppercase">Aria Vance</span>
-        <span class="text-[10px] tracking-[0.3em] uppercase text-neutral-400 font-medium">Fine Line Illustrator</span>
+  <header class="sticky top-0 z-40 bg-[#FDFCFB]/90 backdrop-blur-md border-b border-[#E5E2DD] transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+      <div class="flex flex-col cursor-pointer" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+        <span class="font-serif italic text-2xl tracking-tighter text-[#1C1C1C]">
+          Aria Vance
+        </span>
+        <span class="text-[10px] tracking-[0.3em] uppercase text-[#9D9891] font-semibold">
+          Fine Line Illustrator
+        </span>
       </div>
 
-      <nav class="hidden md:flex items-center space-x-10 text-xs tracking-[0.18em] uppercase font-medium text-neutral-500">
-        <a href="#portfolio" class="hover:text-neutral-900 transition-colors duration-200">The Catalog</a>
-        <a href="#about" class="hover:text-neutral-900 transition-colors duration-200">About the Artist</a>
-        <a href="#where-to-buy" class="hover:text-neutral-900 transition-colors duration-200">Where to Buy</a>
-        <a href="#newsletter" class="hover:text-neutral-900 transition-colors duration-200">Join Studio</a>
+      <nav class="hidden md:flex items-center space-x-10 text-xs uppercase tracking-[0.2em] font-semibold text-[#66635F]">
+        <a href="#portfolio" class="hover:text-[#1C1C1C] transition-colors duration-200">The Catalog</a>
+        <a href="#about" class="hover:text-[#1C1C1C] transition-colors duration-200">About the Artist</a>
+        <a href="#where-to-buy" class="hover:text-[#1C1C1C] transition-colors duration-200">Where to Buy</a>
+        <a href="#documentation" class="hover:text-[#1C1C1C] transition-colors duration-200">Project Docs</a>
       </nav>
 
-      <div>
-        <a href="#where-to-buy" class="bg-neutral-900 hover:bg-neutral-800 text-white text-[11px] tracking-wider uppercase px-5 py-2.5 font-medium flex items-center gap-2 transition-all duration-300">
-          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="inline"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      <div class="flex items-center">
+        <a href="#where-to-buy" class="bg-[#1C1C1C] hover:bg-[#4A4744] text-white text-[11px] tracking-widest uppercase px-6 py-3 rounded-none font-semibold flex items-center gap-2 transition-all duration-300 border border-[#1C1C1C]">
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
           <span>Shop Books</span>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="relative pt-12 pb-24 md:py-32 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+  <!-- Hero Split Section -->
+  <section class="relative border-b border-[#E5E2DD]">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 min-h-[calc(100vh-80px)] lg:min-h-0">
         
-        <!-- Bio Column -->
-        <div class="lg:col-span-7 space-y-8">
+        <!-- Left Column: Bio & Documentation links -->
+        <div class="lg:col-span-7 p-8 lg:p-16 flex flex-col justify-center border-r lg:border-[#E5E2DD] space-y-8">
           <div class="space-y-4">
-            <div class="inline-flex items-center gap-2 text-stone-500 uppercase tracking-[0.2em] text-xs font-semibold">
-              <span class="w-8 h-[1px] bg-stone-300"></span>
+            <div class="inline-flex items-center gap-2 text-[#9D9891] uppercase tracking-[0.3em] text-xs font-bold italic">
+              <span class="w-8 h-[1px] bg-[#D1CCC5]"></span>
               <span>Premium Adult Coloring Books</span>
             </div>
-            <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl text-neutral-900 font-light leading-[1.1] tracking-tight">
-              Hand-crafted <br>
-              <span class="italic font-normal text-stone-600">mindfulness</span> in line.
+            <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl text-[#1C1C1C] font-light leading-[1.1] tracking-tight">
+              Refining the art of silence <span class="italic font-normal text-[#66635F]">through line</span>.
             </h1>
           </div>
 
-          <div class="text-neutral-600 space-y-6 text-base md:text-lg font-light leading-relaxed max-w-2xl">
+          <div class="text-[#4A4744] space-y-6 text-base md:text-lg font-light leading-relaxed">
             <p>
-              Welcome to the studio of <strong class="font-medium text-neutral-800">Aria Vance</strong>, 
+              Welcome to the studio of <strong class="font-medium text-[#1C1C1C]">Aria Vance</strong>, 
               where intricate ink illustrations are transformed into immersive, heavyweight adult coloring books. 
               Every illustration begins as an original hand-drawn ink sketch on cotton plate, meticulously 
               drafted with a devotion to clean line-weight, balanced negative space, and complex natural motifs.
             </p>
             <p>
               Designed strictly for fine-art enthusiasts and coloring collectors, our print catalog features 
-              single-sided, ultra-premium 120gsm paper to allow complete creative freedom with watercolors, markers, 
-              and pigment pencils without fear of bleeding.
+              single-sided, ultra-premium 120gsm paper to allow complete creative freedom without bleed-through.
             </p>
           </div>
 
           <div class="flex flex-col sm:flex-row gap-4 pt-4">
-            <a href="#portfolio" class="bg-neutral-900 hover:bg-neutral-800 text-white font-medium text-xs tracking-widest uppercase py-4 px-8 border border-neutral-900 rounded-none flex items-center justify-center gap-2 transition-all duration-300">
+            <a href="#portfolio" class="bg-[#1C1C1C] hover:bg-[#4A4744] text-white font-semibold text-xs tracking-widest uppercase py-4 px-8 border border-[#1C1C1C] rounded-none flex items-center justify-center gap-2 transition-all duration-300 text-center">
               <span>Explore Catalog</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
-            <a href="#about" class="bg-transparent hover:bg-neutral-100 text-neutral-800 border border-neutral-200 font-medium text-xs tracking-widest uppercase py-4 px-8 rounded-none text-center transition-all duration-300">
+            <a href="#about" class="bg-transparent hover:bg-[#F8F6F3] text-[#1C1C1C] border border-[#E5E2DD] font-semibold text-xs tracking-widest uppercase py-4 px-8 rounded-none transition-all duration-300 text-center">
               Meet the Illustrator
             </a>
           </div>
 
-          <!-- Trust Figures -->
-          <div class="grid grid-cols-3 gap-6 pt-10 border-t border-neutral-200/60 max-w-lg">
-            <div>
-              <h4 class="font-serif text-2xl text-neutral-900">40k+</h4>
-              <p class="text-[10px] uppercase tracking-wider text-neutral-400 font-medium mt-1">Books Collected</p>
-            </div>
-            <div>
-              <h4 class="font-serif text-2xl text-neutral-900">120 GSM</h4>
-              <p class="text-[10px] uppercase tracking-wider text-neutral-400 font-medium mt-1">Artist Paper</p>
-            </div>
-            <div>
-              <h4 class="font-serif text-2xl text-neutral-900">100%</h4>
-              <p class="text-[10px] uppercase tracking-wider text-neutral-400 font-medium mt-1">Hand-Illustrated</p>
+          <!-- Suggested Repositories / Files for Serious Lifecycle Look -->
+          <div id="documentation" class="pt-8 border-t border-[#E5E2DD] space-y-4">
+            <h3 class="text-xs uppercase tracking-[0.2em] text-[#9D9891] font-bold">Project Documentation</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-3 text-[10px] font-mono text-[#7A7570]">
+              <div class="flex items-center gap-2 bg-[#F8F6F3] py-2 px-3 border border-[#E5E2DD]">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#D1CCC5]"></span>
+                <span>DEVELOPMENT_ROADMAP.md</span>
+              </div>
+              <div class="flex items-center gap-2 bg-[#F8F6F3] py-2 px-3 border border-[#E5E2DD]">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#D1CCC5]"></span>
+                <span>ASSET_PIPELINE.json</span>
+              </div>
+              <div class="flex items-center gap-2 bg-[#F8F6F3] py-2 px-3 border border-[#E5E2DD]">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#D1CCC5]"></span>
+                <span>BRAND_STRATEGY.md</span>
+              </div>
+              <div class="flex items-center gap-2 bg-[#F8F6F3] py-2 px-3 border border-[#E5E2DD]">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#D1CCC5]"></span>
+                <span>MANIFEST.v1.json</span>
+              </div>
+              <div class="flex items-center gap-2 bg-[#F8F6F3] py-2 px-3 border border-[#E5E2DD]">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#D1CCC5]"></span>
+                <span>DISTRIBUTION_API.md</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Featured Image / Mockup Column -->
-        <div class="lg:col-span-5 relative mt-6 lg:mt-0 flex justify-center">
-          <div class="relative w-full max-w-sm aspect-[3/4] bg-neutral-100 border border-neutral-200/60 p-4 shadow-xl shadow-stone-200/50 group">
-            <!-- Spine spine binder line -->
-            <div class="absolute left-0 top-0 bottom-0 w-2.5 bg-neutral-950/90 z-10 shadow-inner"></div>
-            <div class="absolute left-2.5 top-0 bottom-0 w-[1px] bg-white/10 z-10"></div>
+        <!-- Right Column: Visual Showcase -->
+        <div class="lg:col-span-5 bg-[#F8F6F3] p-8 lg:p-16 flex flex-col justify-center items-center relative overflow-hidden">
+          <div class="relative w-full max-w-sm aspect-[3/4] bg-white border border-[#E5E2DD] p-6 shadow-sm group">
             
-            <div class="w-full h-full relative overflow-hidden bg-white">
-              <!-- Beautiful placeholder image representing cover art -->
-              <img src="https://picsum.photos/seed/enchantedforest/800/1066" alt="Enchanted Forest Wonders Cover Art" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]">
-              <div class="absolute inset-0 bg-neutral-900/5 hover:bg-transparent transition-colors duration-300"></div>
+            <!-- Book Spine Line -->
+            <div class="absolute left-0 top-0 bottom-0 w-3 bg-[#1C1C1C]/95 z-10 shadow-inner"></div>
+            <div class="absolute left-3 top-0 bottom-0 w-[1px] bg-white/20 z-10"></div>
+            
+            <div class="w-full h-full relative overflow-hidden bg-[#FDFCFB] border border-dashed border-[#D1CCC5] flex items-center justify-center p-2">
+              <img
+                src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=1000"
+                alt="Enchanted Forest Wonders Cover Art"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-[#1C1C1C]/5 hover:bg-transparent transition-colors duration-300"></div>
             </div>
 
-            <!-- Custom Sticker Badge -->
-            <div class="absolute -top-4 -right-4 bg-[#DFDCD4] text-neutral-900 w-20 h-20 rounded-full flex flex-col items-center justify-center border border-white shadow-lg rotate-12">
-              <span class="text-[8px] uppercase tracking-widest font-bold text-neutral-500">Premium</span>
+            <!-- Sticker Badge -->
+            <div class="absolute -top-4 -right-4 bg-[#E5E2DD] text-[#1C1C1C] w-20 h-20 rounded-full flex flex-col items-center justify-center border border-[#FAF9F6] shadow-md rotate-12">
+              <span class="text-[7px] uppercase tracking-widest font-bold text-[#66635F]">Premium</span>
               <span class="font-serif text-xs font-bold mt-0.5">120gsm</span>
-              <span class="text-[7px] uppercase tracking-widest font-medium text-neutral-500">Paper</span>
+              <span class="text-[7px] uppercase tracking-widest font-medium text-[#66635F]">Paper</span>
             </div>
+          </div>
+
+          <div class="mt-8 text-center max-w-xs space-y-1">
+            <span class="text-[10px] uppercase tracking-[0.25em] font-bold text-[#9D9891]">Featured Edition</span>
+            <p class="font-serif italic text-sm text-[#4A4744]">Enchanted Forest Wonders, Vol. I</p>
           </div>
         </div>
 
@@ -143,53 +174,53 @@
     </div>
   </section>
 
-  <!-- Production Value / Trust Badges Banner -->
-  <section class="bg-neutral-900 text-neutral-100 py-16 border-t border-b border-neutral-800">
-    <div class="max-w-7xl mx-auto px-6">
+  <!-- Key Product Features -->
+  <section class="bg-[#1C1C1C] text-[#FAF9F6] py-16 border-b border-[#E5E2DD]">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
         <div class="flex items-start gap-4">
-          <div class="p-3 bg-neutral-800 text-stone-200">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+          <div class="p-3 bg-[#4A4744] text-[#FDFCFB]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 2 18 2 18 6 6 6"/><rect x="3" y="6" width="18" height="11" rx="2"/><path d="M6 17h12v4H6z"/></svg>
           </div>
           <div>
-            <h4 class="font-serif text-lg tracking-wide font-light">Ultra-Heavy Paper</h4>
-            <p class="text-neutral-400 text-xs mt-1 font-light leading-relaxed">
+            <h4 class="font-serif text-lg tracking-wide font-light text-white">Ultra-Heavy Paper</h4>
+            <p class="text-[#9D9891] text-xs mt-1 font-light leading-relaxed">
               Printed on robust 120 GSM acid-free paper. Paint, ink, or dual-tips will not ghost or bleed.
             </p>
           </div>
         </div>
 
         <div class="flex items-start gap-4">
-          <div class="p-3 bg-neutral-800 text-stone-200">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M16.24 7.76l-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z"/></svg>
+          <div class="p-3 bg-[#4A4744] text-[#FDFCFB]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
           </div>
           <div>
-            <h4 class="font-serif text-lg tracking-wide font-light">Mindful Designs</h4>
-            <p class="text-neutral-400 text-xs mt-1 font-light leading-relaxed">
+            <h4 class="font-serif text-lg tracking-wide font-light text-white">Mindful Designs</h4>
+            <p class="text-[#9D9891] text-xs mt-1 font-light leading-relaxed">
               Balanced complexity specifically structured to soothe busy minds and promote focus therapy.
             </p>
           </div>
         </div>
 
         <div class="flex items-start gap-4">
-          <div class="p-3 bg-neutral-800 text-stone-200">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          <div class="p-3 bg-[#4A4744] text-[#FDFCFB]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
           </div>
           <div>
-            <h4 class="font-serif text-lg tracking-wide font-light">Single-Sided Print</h4>
-            <p class="text-neutral-400 text-xs mt-1 font-light leading-relaxed">
+            <h4 class="font-serif text-lg tracking-wide font-light text-white">Single-Sided Print</h4>
+            <p class="text-[#9D9891] text-xs mt-1 font-light leading-relaxed">
               Every drawing rests on its own page, leaving the back pristine. Cut out and frame your results effortlessly.
             </p>
           </div>
         </div>
 
         <div class="flex items-start gap-4">
-          <div class="p-3 bg-neutral-800 text-stone-200">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></svg>
+          <div class="p-3 bg-[#4A4744] text-[#FDFCFB]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
           </div>
           <div>
-            <h4 class="font-serif text-lg tracking-wide font-light">Pure Hand-drawn Ink</h4>
-            <p class="text-neutral-400 text-xs mt-1 font-light leading-relaxed">
+            <h4 class="font-serif text-lg tracking-wide font-light text-white">Pure Hand-drawn Ink</h4>
+            <p class="text-[#9D9891] text-xs mt-1 font-light leading-relaxed">
               Strictly 100% hand-crafted linework. Zero digital approximations, repetitive stamps, or generative templates.
             </p>
           </div>
@@ -198,131 +229,172 @@
     </div>
   </section>
 
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="py-24 md:py-32 bg-gallery">
-    <div class="max-w-7xl mx-auto px-6">
+  <!-- Portfolio Grid Section -->
+  <section id="portfolio" class="py-24 lg:py-32 bg-[#F8F6F3] border-b border-[#E5E2DD]">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
       
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 space-y-4 md:space-y-0">
         <div class="space-y-3">
-          <span class="text-[10px] uppercase tracking-[0.3em] font-semibold text-neutral-400">The Collection</span>
-          <h2 class="font-serif text-4xl md:text-5xl text-neutral-900 font-light">Coloring Catalog</h2>
+          <span class="text-[10px] uppercase tracking-[0.3em] font-bold text-[#9D9891] block">The Collection</span>
+          <h2 class="font-serif text-4xl lg:text-5xl text-[#1C1C1C] font-light">
+            Coloring Catalog
+          </h2>
         </div>
-        <p class="text-neutral-500 font-light text-sm max-w-md md:text-right leading-relaxed">
-          Explore our structured range of limited edition print volumes. Click any coloring book card to inspect detailed technical specifications, page sizes, and physical features.
+        <p class="text-[#4A4744] font-light text-sm max-w-md md:text-right leading-relaxed">
+          Explore our structured range of limited edition print volumes. Click any coloring book to inspect detailed specifications, paper details, and look inside samples.
         </p>
       </div>
 
-      <!-- Portfolio Catalog Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         
         <!-- Book 1 -->
-        <div onclick="openBookModal(0)" class="group flex flex-col bg-white border border-neutral-100 p-4 cursor-pointer shadow-sm hover:shadow-lg transition-all duration-300">
-          <div class="aspect-[3/4] overflow-hidden bg-neutral-50 border border-neutral-100 relative">
-            <img src="https://picsum.photos/seed/forest/800/1066" alt="Enchanted Forest Wonders Cover" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-            <div class="absolute inset-0 bg-neutral-900/0 group-hover:bg-neutral-950/10 transition-colors duration-300 flex items-center justify-center">
-              <span class="bg-white/95 text-neutral-800 text-[10px] tracking-wider uppercase font-semibold px-4 py-2 opacity-0 group-hover:opacity-100 transition-all duration-300">Look Inside Spec</span>
+        <div class="group flex flex-col bg-white border border-[#E5E2DD] p-5 cursor-pointer shadow-sm hover:shadow-md transition-all duration-300" onclick="openBookModal('enchanted-forest')">
+          <div class="aspect-[3/4] overflow-hidden bg-[#FDFCFB] border border-dashed border-[#D1CCC5] relative p-1.5 flex items-center justify-center">
+            <img
+              src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=600"
+              alt="Enchanted Forest Wonders"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-[#1C1C1C]/0 group-hover:bg-[#1C1C1C]/10 transition-colors duration-300 flex items-center justify-center">
+              <span class="bg-[#FDFCFB] text-[#1C1C1C] text-[10px] tracking-wider uppercase font-semibold px-4 py-2 border border-[#E5E2DD] opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                Look Inside Spec
+              </span>
             </div>
           </div>
           <div class="mt-5 flex-grow flex flex-col justify-between space-y-3">
             <div>
-              <div class="flex items-center justify-between text-[10px] tracking-wider text-neutral-400 font-medium uppercase">
+              <div class="flex items-center justify-between text-[10px] tracking-wider text-[#9D9891] font-bold uppercase">
                 <span>84 Pages</span>
                 <span>•</span>
                 <span>Intermediate</span>
               </div>
-              <h3 class="font-serif text-lg text-neutral-950 font-normal mt-1.5 leading-snug">Enchanted Forest Wonders</h3>
-              <p class="text-xs text-neutral-400 italic mt-0.5 font-light">A Botanical & Woodland Sanctuary</p>
+              <h3 class="font-serif text-lg text-[#1C1C1C] font-normal mt-1.5 leading-snug group-hover:text-[#66635F] transition-colors duration-200">
+                Enchanted Forest Wonders
+              </h3>
+              <p class="text-xs text-[#9D9891] italic mt-0.5 font-light">
+                A Botanical & Woodland Sanctuary
+              </p>
             </div>
-            <p class="text-xs text-neutral-500 font-light line-clamp-3 leading-relaxed pt-2 border-t border-neutral-100">
-              An immersive journey through thick woodlands, forgotten groves, and quiet forest sanctuaries. Features intricate drawings of hidden wildlife.
+            <p class="text-xs text-[#4A4744] font-light line-clamp-3 leading-relaxed pt-2 border-t border-[#E5E2DD]">
+              An immersive journey through thick woodlands, forgotten groves, and quiet forest sanctuaries. Features intricate drawings of hidden wildlife and majestic stags.
             </p>
-            <div class="pt-2 flex items-center text-xs tracking-wider font-semibold text-neutral-900 uppercase gap-1.5">
+            <div class="pt-2 flex items-center text-xs tracking-widest font-bold text-[#1C1C1C] uppercase group-hover:text-[#66635F] transition-colors duration-200 gap-1.5 mt-auto">
               <span>Inspect Details</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transform group-hover:translate-x-1 transition-transform duration-200"><polyline points="9 18 15 12 9 6"/></svg>
             </div>
           </div>
         </div>
 
         <!-- Book 2 -->
-        <div onclick="openBookModal(1)" class="group flex flex-col bg-white border border-neutral-100 p-4 cursor-pointer shadow-sm hover:shadow-lg transition-all duration-300">
-          <div class="aspect-[3/4] overflow-hidden bg-neutral-50 border border-neutral-100 relative">
-            <img src="https://picsum.photos/seed/cosmic/800/1066" alt="Cosmic Mandalas Cover" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-            <div class="absolute inset-0 bg-neutral-900/0 group-hover:bg-neutral-950/10 transition-colors duration-300 flex items-center justify-center">
-              <span class="bg-white/95 text-neutral-800 text-[10px] tracking-wider uppercase font-semibold px-4 py-2 opacity-0 group-hover:opacity-100 transition-all duration-300">Look Inside Spec</span>
+        <div class="group flex flex-col bg-white border border-[#E5E2DD] p-5 cursor-pointer shadow-sm hover:shadow-md transition-all duration-300" onclick="openBookModal('cosmic-mandalas')">
+          <div class="aspect-[3/4] overflow-hidden bg-[#FDFCFB] border border-dashed border-[#D1CCC5] relative p-1.5 flex items-center justify-center">
+            <img
+              src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&q=80&w=600"
+              alt="Cosmic Mandalas"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-[#1C1C1C]/0 group-hover:bg-[#1C1C1C]/10 transition-colors duration-300 flex items-center justify-center">
+              <span class="bg-[#FDFCFB] text-[#1C1C1C] text-[10px] tracking-wider uppercase font-semibold px-4 py-2 border border-[#E5E2DD] opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                Look Inside Spec
+              </span>
             </div>
           </div>
           <div class="mt-5 flex-grow flex flex-col justify-between space-y-3">
             <div>
-              <div class="flex items-center justify-between text-[10px] tracking-wider text-neutral-400 font-medium uppercase">
+              <div class="flex items-center justify-between text-[10px] tracking-wider text-[#9D9891] font-bold uppercase">
                 <span>78 Pages</span>
                 <span>•</span>
                 <span>Advanced</span>
               </div>
-              <h3 class="font-serif text-lg text-neutral-950 font-normal mt-1.5 leading-snug">Cosmic Mandalas</h3>
-              <p class="text-xs text-neutral-400 italic mt-0.5 font-light">Sacred Geometry & Celestial Vistas</p>
+              <h3 class="font-serif text-lg text-[#1C1C1C] font-normal mt-1.5 leading-snug group-hover:text-[#66635F] transition-colors duration-200">
+                Cosmic Mandalas
+              </h3>
+              <p class="text-xs text-[#9D9891] italic mt-0.5 font-light">
+                Sacred Geometry & Celestial Vistas
+              </p>
             </div>
-            <p class="text-xs text-neutral-500 font-light line-clamp-3 leading-relaxed pt-2 border-t border-neutral-100">
-              Symmetry meets the infinite depth of the night sky. Each mandala blends traditional meditative patterns with celestial starbursts and moon vistas.
+            <p class="text-xs text-[#4A4744] font-light line-clamp-3 leading-relaxed pt-2 border-t border-[#E5E2DD]">
+              Symmetry meets the infinite depth of the night sky. Each mandala blends traditional circular patterns with starbursts and moons.
             </p>
-            <div class="pt-2 flex items-center text-xs tracking-wider font-semibold text-neutral-900 uppercase gap-1.5">
+            <div class="pt-2 flex items-center text-xs tracking-widest font-bold text-[#1C1C1C] uppercase group-hover:text-[#66635F] transition-colors duration-200 gap-1.5 mt-auto">
               <span>Inspect Details</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transform group-hover:translate-x-1 transition-transform duration-200"><polyline points="9 18 15 12 9 6"/></svg>
             </div>
           </div>
         </div>
 
         <!-- Book 3 -->
-        <div onclick="openBookModal(2)" class="group flex flex-col bg-white border border-neutral-100 p-4 cursor-pointer shadow-sm hover:shadow-lg transition-all duration-300">
-          <div class="aspect-[3/4] overflow-hidden bg-neutral-50 border border-neutral-100 relative">
-            <img src="https://picsum.photos/seed/oceanic/800/1066" alt="Oceanic Dreams Cover" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-            <div class="absolute inset-0 bg-neutral-900/0 group-hover:bg-neutral-950/10 transition-colors duration-300 flex items-center justify-center">
-              <span class="bg-white/95 text-neutral-800 text-[10px] tracking-wider uppercase font-semibold px-4 py-2 opacity-0 group-hover:opacity-100 transition-all duration-300">Look Inside Spec</span>
+        <div class="group flex flex-col bg-white border border-[#E5E2DD] p-5 cursor-pointer shadow-sm hover:shadow-md transition-all duration-300" onclick="openBookModal('oceanic-dreams')">
+          <div class="aspect-[3/4] overflow-hidden bg-[#FDFCFB] border border-dashed border-[#D1CCC5] relative p-1.5 flex items-center justify-center">
+            <img
+              src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&q=80&w=600"
+              alt="Oceanic Dreams"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-[#1C1C1C]/0 group-hover:bg-[#1C1C1C]/10 transition-colors duration-300 flex items-center justify-center">
+              <span class="bg-[#FDFCFB] text-[#1C1C1C] text-[10px] tracking-wider uppercase font-semibold px-4 py-2 border border-[#E5E2DD] opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                Look Inside Spec
+              </span>
             </div>
           </div>
           <div class="mt-5 flex-grow flex flex-col justify-between space-y-3">
             <div>
-              <div class="flex items-center justify-between text-[10px] tracking-wider text-neutral-400 font-medium uppercase">
+              <div class="flex items-center justify-between text-[10px] tracking-wider text-[#9D9891] font-bold uppercase">
                 <span>80 Pages</span>
                 <span>•</span>
                 <span>All Levels</span>
               </div>
-              <h3 class="font-serif text-lg text-neutral-950 font-normal mt-1.5 leading-snug">Oceanic Dreams</h3>
-              <p class="text-xs text-neutral-400 italic mt-0.5 font-light">An Underwater Journey of Ink</p>
+              <h3 class="font-serif text-lg text-[#1C1C1C] font-normal mt-1.5 leading-snug group-hover:text-[#66635F] transition-colors duration-200">
+                Oceanic Dreams
+              </h3>
+              <p class="text-xs text-[#9D9891] italic mt-0.5 font-light">
+                An Underwater Journey of Ink
+              </p>
             </div>
-            <p class="text-xs text-neutral-500 font-light line-clamp-3 leading-relaxed pt-2 border-t border-neutral-100">
-              Dive beneath the quiet tides into a world of fluid ink. Swim alongside majestic sea turtles, coral reefs, and delicate sea grass arrays.
+            <p class="text-xs text-[#4A4744] font-light line-clamp-3 leading-relaxed pt-2 border-t border-[#E5E2DD]">
+              Dive beneath the quiet tides into a world of fluid ink. Swim alongside majestic sea turtles and complex oceanic reef configurations.
             </p>
-            <div class="pt-2 flex items-center text-xs tracking-wider font-semibold text-neutral-900 uppercase gap-1.5">
+            <div class="pt-2 flex items-center text-xs tracking-widest font-bold text-[#1C1C1C] uppercase group-hover:text-[#66635F] transition-colors duration-200 gap-1.5 mt-auto">
               <span>Inspect Details</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transform group-hover:translate-x-1 transition-transform duration-200"><polyline points="9 18 15 12 9 6"/></svg>
             </div>
           </div>
         </div>
 
         <!-- Book 4 -->
-        <div onclick="openBookModal(3)" class="group flex flex-col bg-white border border-neutral-100 p-4 cursor-pointer shadow-sm hover:shadow-lg transition-all duration-300">
-          <div class="aspect-[3/4] overflow-hidden bg-neutral-50 border border-neutral-100 relative">
-            <img src="https://picsum.photos/seed/garden/800/1066" alt="Secret Garden Botanicals Cover" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-            <div class="absolute inset-0 bg-neutral-900/0 group-hover:bg-neutral-950/10 transition-colors duration-300 flex items-center justify-center">
-              <span class="bg-white/95 text-neutral-800 text-[10px] tracking-wider uppercase font-semibold px-4 py-2 opacity-0 group-hover:opacity-100 transition-all duration-300">Look Inside Spec</span>
+        <div class="group flex flex-col bg-white border border-[#E5E2DD] p-5 cursor-pointer shadow-sm hover:shadow-md transition-all duration-300" onclick="openBookModal('secret-garden')">
+          <div class="aspect-[3/4] overflow-hidden bg-[#FDFCFB] border border-dashed border-[#D1CCC5] relative p-1.5 flex items-center justify-center">
+            <img
+              src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&q=80&w=600"
+              alt="Secret Garden Botanicals"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-[#1C1C1C]/0 group-hover:bg-[#1C1C1C]/10 transition-colors duration-300 flex items-center justify-center">
+              <span class="bg-[#FDFCFB] text-[#1C1C1C] text-[10px] tracking-wider uppercase font-semibold px-4 py-2 border border-[#E5E2DD] opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                Look Inside Spec
+              </span>
             </div>
           </div>
           <div class="mt-5 flex-grow flex flex-col justify-between space-y-3">
             <div>
-              <div class="flex items-center justify-between text-[10px] tracking-wider text-neutral-400 font-medium uppercase">
+              <div class="flex items-center justify-between text-[10px] tracking-wider text-[#9D9891] font-bold uppercase">
                 <span>92 Pages</span>
                 <span>•</span>
-                <span>Beginner+</span>
+                <span>Beginner to Int</span>
               </div>
-              <h3 class="font-serif text-lg text-neutral-950 font-normal mt-1.5 leading-snug">Secret Garden Botanicals</h3>
-              <p class="text-xs text-neutral-400 italic mt-0.5 font-light">Delicate Flora & Fluttering Wings</p>
+              <h3 class="font-serif text-lg text-[#1C1C1C] font-normal mt-1.5 leading-snug group-hover:text-[#66635F] transition-colors duration-200">
+                Secret Garden Botanicals
+              </h3>
+              <p class="text-xs text-[#9D9891] italic mt-0.5 font-light">
+                Delicate Flora & Fluttering Wings
+              </p>
             </div>
-            <p class="text-xs text-neutral-500 font-light line-clamp-3 leading-relaxed pt-2 border-t border-neutral-100">
-              An intimate, close-up study of exotic botany and garden ecosystems. Delicate orchids, curling ivy vines, and exotic flowers.
+            <p class="text-xs text-[#4A4744] font-light line-clamp-3 leading-relaxed pt-2 border-t border-[#E5E2DD]">
+              An intimate, close-up study of exotic botany and garden ecosystems. Delicate orchids, ivy vines, and beautiful butterflies.
             </p>
-            <div class="pt-2 flex items-center text-xs tracking-wider font-semibold text-neutral-900 uppercase gap-1.5">
+            <div class="pt-2 flex items-center text-xs tracking-widest font-bold text-[#1C1C1C] uppercase group-hover:text-[#66635F] transition-colors duration-200 gap-1.5 mt-auto">
               <span>Inspect Details</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transform group-hover:translate-x-1 transition-transform duration-200"><polyline points="9 18 15 12 9 6"/></svg>
             </div>
           </div>
         </div>
@@ -331,30 +403,37 @@
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-24 md:py-32 bg-[#F3F1EC] relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-6">
+  <!-- About The Artist Section -->
+  <section id="about" class="py-24 lg:py-32 bg-[#F8F6F3] border-b border-[#E5E2DD]">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
         
-        <!-- Portrait Column -->
+        <!-- Portrait Frame -->
         <div class="lg:col-span-5 flex justify-center">
-          <div class="relative p-3 bg-white border border-neutral-200 max-w-sm w-full shadow-lg">
-            <div class="aspect-[4/5] bg-neutral-50 border border-neutral-100 overflow-hidden relative">
-              <img src="https://picsum.photos/seed/artiststudio/800/1000" alt="Aria Vance Studio Setup" class="w-full h-full object-cover grayscale brightness-95">
+          <div class="relative p-3 bg-white border border-[#E5E2DD] max-w-sm w-full shadow-sm">
+            <div class="aspect-[4/5] bg-[#FDFCFB] border border-dashed border-[#D1CCC5] overflow-hidden relative group p-2">
+              <img
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800"
+                alt="Aria Vance Studio Setup"
+                class="w-full h-full object-cover grayscale brightness-95 contrast-105 transition-transform duration-700 group-hover:scale-102"
+              />
+              <div class="absolute inset-0 bg-[#1C1C1C]/10 mix-blend-overlay"></div>
             </div>
-            <div class="p-4 text-center bg-gallery border-t border-neutral-100 mt-2">
-              <span class="font-serif text-sm italic text-neutral-800">Aria Vance in her Seattle print workshop, 2026</span>
+            <div class="p-4 text-center bg-[#FDFCFB] border-t border-[#E5E2DD] mt-2">
+              <span class="font-serif text-sm italic text-[#4A4744]">Aria Vance in her Seattle print workshop, 2026</span>
             </div>
           </div>
         </div>
 
-        <!-- Info Column -->
+        <!-- Bio Content -->
         <div class="lg:col-span-7 space-y-6">
-          <span class="text-[10px] uppercase tracking-[0.3em] font-semibold text-neutral-400 block">The Artist</span>
-          <h2 class="font-serif text-4xl md:text-5xl text-neutral-900 font-light">Meet Aria Vance</h2>
-          <div class="h-[1px] w-20 bg-stone-400/50"></div>
+          <span class="text-[10px] uppercase tracking-[0.3em] font-bold text-[#9D9891] block">The Artist</span>
+          <h2 class="font-serif text-4xl lg:text-5xl text-[#1C1C1C] font-light">
+            Meet Aria Vance
+          </h2>
+          <div class="h-[1px] w-20 bg-[#D1CCC5]"></div>
           
-          <div class="text-neutral-600 space-y-5 text-sm md:text-base font-light leading-relaxed max-w-2xl">
+          <div class="text-[#4A4744] space-y-5 text-sm md:text-base font-light leading-relaxed max-w-2xl">
             <p>
               Aria Vance is a fine line ink illustrator based in Seattle, Washington. With a background in classical 
               printmaking and botanical draftsmanship, Aria’s work explores the therapeutic relationships between line architecture, 
@@ -365,9 +444,14 @@
               Rather than keeping her original hand-drawn plates locked behind gallery collections, she invites colorists 
               worldwide to become co-creators of her art.
             </p>
+            <p>
+              Aria remains fiercely traditional in her production style: every plate is drawn over several weeks using archival archival pigment ink liners, 
+              with no digital assistance. When she is not in her drawing room, she can be found foraging native botanical specimens 
+              along the coastal Pacific Northwest trail lines to inspire her next catalog plate collection.
+            </p>
           </div>
 
-          <div class="bg-gallery p-6 border-l-2 border-stone-800 italic text-neutral-700 font-serif text-sm md:text-base leading-relaxed max-w-xl shadow-sm mt-4">
+          <div class="bg-[#FDFCFB] p-6 border-l-2 border-[#1C1C1C] italic text-[#4A4744] font-serif text-sm md:text-base leading-relaxed max-w-xl shadow-sm mt-4">
             "A line is a path of concentration. By filling the white spaces I create, my hope is that you find your own slow, 
             quiet rhythm and escape the digital noise of the screen."
           </div>
@@ -377,203 +461,236 @@
     </div>
   </section>
 
-  <!-- Where to Buy Section -->
-  <section id="where-to-buy" class="py-24 md:py-32 bg-gallery border-t border-neutral-100">
+  <!-- Where to Buy Sales Section -->
+  <section id="where-to-buy" class="py-24 lg:py-32 bg-[#FDFCFB] border-b border-[#E5E2DD]">
     <div class="max-w-4xl mx-auto px-6 text-center space-y-12">
       
       <div class="space-y-4">
-        <span class="text-[10px] uppercase tracking-[0.3em] font-bold text-neutral-400">Global Outlets</span>
-        <h2 class="font-serif text-4xl md:text-5xl text-neutral-950 font-light">Where to Purchase</h2>
-        <div class="h-[1px] w-12 bg-neutral-300 mx-auto"></div>
-        <p class="text-neutral-500 font-light text-sm max-w-lg mx-auto leading-relaxed">
-          Our coloring books are distributed globally across major marketplaces and craft networks. Select your preferred platform below to purchase physical softcovers or instant PDF downloads.
+        <span class="text-[10px] uppercase tracking-[0.3em] font-bold text-[#9D9891]">Global Outlets</span>
+        <h2 class="font-serif text-4xl lg:text-5xl text-[#1C1C1C] font-light">
+          Where to Purchase
+        </h2>
+        <div class="h-[1px] w-12 bg-[#D1CCC5] mx-auto"></div>
+        <p class="text-[#4A4744] font-light text-sm max-w-lg mx-auto leading-relaxed">
+          Our coloring books are distributed globally across major marketplaces and craft networks. 
+          Select your preferred platform below to purchase print softcovers, coil-bound editions, or direct PDF downloads.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
         
         <!-- Amazon Card -->
-        <div class="bg-white border border-neutral-200/60 p-8 flex flex-col justify-between items-center space-y-6 shadow-sm hover:shadow-md transition-all duration-300">
+        <div class="bg-white border border-[#E5E2DD] p-8 flex flex-col justify-between items-center space-y-6 shadow-sm hover:shadow-md transition-all duration-300">
           <div class="space-y-2 text-center">
-            <span class="text-[10px] tracking-wider uppercase font-medium text-amber-600 bg-amber-50 px-2.5 py-0.5 rounded-full">Paperbacks</span>
-            <h3 class="font-serif text-xl text-neutral-900 font-medium">Amazon</h3>
-            <p class="text-neutral-400 text-xs font-light">Best for fast global shipping and high-quality printed paperbacks.</p>
+            <span class="text-[9px] tracking-wider uppercase font-bold text-[#1C1C1C] bg-[#F8F6F3] border border-[#E5E2DD] px-2.5 py-1">Paperback Outlets</span>
+            <h3 class="font-serif text-xl text-[#1C1C1C] font-medium pt-2">Amazon Store</h3>
+            <p class="text-[#9D9891] text-xs font-light">Best for fast global delivery and durable paperback editions.</p>
           </div>
-          <a href="https://amazon.com" target="_blank" rel="noopener noreferrer" class="w-full bg-neutral-900 hover:bg-neutral-800 text-white font-medium text-[11px] tracking-wider uppercase py-3 text-center transition-colors duration-200 flex items-center justify-center gap-1">
+          <a 
+            href="https://amazon.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="w-full bg-[#1C1C1C] hover:bg-[#4A4744] text-white font-semibold text-[11px] tracking-widest uppercase py-3 border border-[#1C1C1C] transition-colors duration-200 flex items-center justify-center gap-1.5"
+          >
             <span>Shop Amazon</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           </a>
         </div>
 
         <!-- Etsy Card -->
-        <div class="bg-white border border-neutral-200/60 p-8 flex flex-col justify-between items-center space-y-6 shadow-sm hover:shadow-md transition-all duration-300">
+        <div class="bg-white border border-[#E5E2DD] p-8 flex flex-col justify-between items-center space-y-6 shadow-sm hover:shadow-md transition-all duration-300">
           <div class="space-y-2 text-center">
-            <span class="text-[10px] tracking-wider uppercase font-medium text-orange-600 bg-orange-50 px-2.5 py-0.5 rounded-full">Digital PDFs</span>
-            <h3 class="font-serif text-xl text-neutral-900 font-medium">Etsy Shop</h3>
-            <p class="text-neutral-400 text-xs font-light">Direct high-res downloads to print at home at high resolution (300 DPI).</p>
+            <span class="text-[9px] tracking-wider uppercase font-bold text-[#1C1C1C] bg-[#F8F6F3] border border-[#E5E2DD] px-2.5 py-1">Artist Bundles</span>
+            <h3 class="font-serif text-xl text-[#1C1C1C] font-medium pt-2">Etsy Shop</h3>
+            <p class="text-[#9D9891] text-xs font-light">Direct digital PDF downloads and signed limited-run prints.</p>
           </div>
-          <a href="https://etsy.com" target="_blank" rel="noopener noreferrer" class="w-full bg-neutral-900 hover:bg-neutral-800 text-white font-medium text-[11px] tracking-wider uppercase py-3 text-center transition-colors duration-200 flex items-center justify-center gap-1">
+          <a 
+            href="https://etsy.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="w-full bg-[#1C1C1C] hover:bg-[#4A4744] text-white font-semibold text-[11px] tracking-widest uppercase py-3 border border-[#1C1C1C] transition-colors duration-200 flex items-center justify-center gap-1.5"
+          >
             <span>Shop Etsy</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           </a>
         </div>
 
-        <!-- Direct Inquiries Card -->
-        <div class="bg-white border border-neutral-200/60 p-8 flex flex-col justify-between items-center space-y-6 shadow-sm hover:shadow-md transition-all duration-300">
+        <!-- Independent Direct Wholesale -->
+        <div class="bg-white border border-[#E5E2DD] p-8 flex flex-col justify-between items-center space-y-6 shadow-sm hover:shadow-md transition-all duration-300">
           <div class="space-y-2 text-center">
-            <span class="text-[10px] tracking-wider uppercase font-medium text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full">Independent</span>
-            <h3 class="font-serif text-xl text-neutral-900 font-medium">Wholesale</h3>
-            <p class="text-neutral-400 text-xs font-light">Ideal for independent bookstores, local libraries, and art workshops.</p>
+            <span class="text-[9px] tracking-wider uppercase font-bold text-[#1C1C1C] bg-[#F8F6F3] border border-[#E5E2DD] px-2.5 py-1">Independent</span>
+            <h3 class="font-serif text-xl text-[#1C1C1C] font-medium pt-2">Ingram / Direct</h3>
+            <p class="text-[#9D9891] text-xs font-light">Ideal for wholesale bookstores, libraries, and art workshops.</p>
           </div>
-          <a href="mailto:studio@ariavance.com?subject=Wholesale Inquiry" class="w-full bg-transparent hover:bg-neutral-50 text-neutral-800 border border-neutral-200 font-medium text-[11px] tracking-wider uppercase py-3 text-center transition-colors duration-200 flex items-center justify-center gap-1">
+          <a 
+            href="mailto:studio@ariavance.com?subject=Wholesale Inquiry" 
+            class="w-full bg-transparent hover:bg-[#F8F6F3] text-[#1C1C1C] border border-[#E5E2DD] font-semibold text-[11px] tracking-widest uppercase py-3 transition-colors duration-200 flex items-center justify-center gap-1.5"
+          >
             <span>Inquire Direct</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           </a>
         </div>
 
       </div>
+
+      <p class="text-[#9D9891] text-xs font-light max-w-md mx-auto">
+        All physical paperback purchases are backed by standard marketplace return policies. 
+        For digital purchases via Etsy, PDF files are instantly rendered and delivered at high-resolution 300 DPI for home printing.
+      </p>
+
     </div>
   </section>
 
-  <!-- Newsletter Section -->
-  <section id="newsletter" class="py-24 bg-[#1E1D1A] text-neutral-100 relative overflow-hidden">
-    <div class="max-w-4xl mx-auto px-6">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+  <!-- Footer (With YouTube and other socials) -->
+  <footer class="bg-[#1C1C1C] text-[#FAF9F6] py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-12 border-b border-[#E5E2DD]/15">
         
-        <div class="lg:col-span-6 space-y-4">
-          <h2 class="font-serif text-3xl md:text-4xl text-white font-light tracking-wide leading-tight">
-            Receive Free Weekly <br>
-            <span class="italic text-stone-400">Printable Plates</span>
-          </h2>
-          <p class="text-neutral-400 text-sm font-light leading-relaxed">
-            Every Sunday, we distribute one high-resolution, watermark-free botanical or geometric sketch for you to print at home, alongside exclusive catalog updates.
-          </p>
-        </div>
-
-        <div class="lg:col-span-6">
-          <form onsubmit="alert('Thank you! Your first free illustration plate is on its way.'); return false;" class="space-y-4">
-            <div class="flex flex-col sm:flex-row gap-2">
-              <input type="email" required placeholder="Enter your email address" class="flex-grow px-5 py-4 bg-neutral-800 border border-neutral-700 text-white text-sm font-light placeholder:text-neutral-500 focus:outline-none focus:border-stone-400">
-              <button type="submit" class="bg-gallery hover:bg-neutral-100 text-neutral-900 font-medium text-xs tracking-widest uppercase py-4 px-6 whitespace-nowrap transition-colors duration-200">
-                Subscribe
-              </button>
-            </div>
-            <p class="text-[11px] text-neutral-400 font-light">We respect your privacy. No spam, ever.</p>
-          </form>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-neutral-950 text-neutral-100 py-16 border-t border-neutral-900">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-12 border-b border-neutral-900">
-        
+        <!-- Branding & Socials -->
         <div class="md:col-span-5 space-y-5">
           <div class="flex flex-col">
-            <span class="font-serif text-2xl tracking-[0.2em] text-white font-medium uppercase">Aria Vance</span>
-            <span class="text-[10px] tracking-[0.25em] uppercase text-stone-500 font-medium mt-1">Fine Line Catalog & Illustrator</span>
+            <span class="font-serif italic text-2xl tracking-tighter text-white">
+              Aria Vance
+            </span>
+            <span class="text-[10px] tracking-[0.25em] uppercase text-[#9D9891] font-semibold mt-1">
+              Fine Line Catalog & Illustrator
+            </span>
           </div>
-          <p class="text-neutral-400 text-xs font-light max-w-sm leading-relaxed">
-            Dedicated to fine line art, meditative sacred geometry, and premium physical paper publishing. All illustrations are registered properties of Aria Vance Studios, Seattle WA.
+          <p class="text-[#9D9891] text-xs font-light max-w-sm leading-relaxed">
+            Dedicated to fine line art, meditative sacred geometry, and premium physical paper publishing. 
+            All illustrations are registered properties of Aria Vance Studios, Seattle WA.
           </p>
+          
+          <!-- Social Icons Block with newly requested YouTube icon -->
+          <div class="flex items-center space-x-4 pt-2">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="p-2 bg-[#4A4744] hover:bg-[#FAF9F6] hover:text-[#1C1C1C] text-white transition-colors duration-200" title="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://youtube.com/@ariavance" target="_blank" rel="noopener noreferrer" class="p-2 bg-[#4A4744] hover:bg-[#FAF9F6] hover:text-[#1C1C1C] text-white transition-colors duration-200" title="YouTube Channel">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
+                <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/>
+              </svg>
+            </a>
+            <a href="mailto:studio@ariavance.com" class="p-2 bg-[#4A4744] hover:bg-[#FAF9F6] hover:text-[#1C1C1C] text-white transition-colors duration-200" title="Email Studio">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
         </div>
 
+        <!-- Sitemap -->
         <div class="md:col-span-3 space-y-4">
-          <h4 class="text-xs tracking-[0.15em] uppercase font-bold text-stone-400">Navigation</h4>
-          <ul class="space-y-2.5 text-xs text-neutral-400 font-light">
+          <h4 class="text-xs tracking-[0.15em] uppercase font-bold text-[#9D9891]">Navigation</h4>
+          <ul class="space-y-2.5 text-xs text-[#9D9891] font-light">
             <li><a href="#portfolio" class="hover:text-white transition-colors duration-200">The Catalog Grid</a></li>
             <li><a href="#about" class="hover:text-white transition-colors duration-200">About the Illustrator</a></li>
             <li><a href="#where-to-buy" class="hover:text-white transition-colors duration-200">Purchasing Outlets</a></li>
+            <li><a href="#documentation" class="hover:text-white transition-colors duration-200">Project Documentation</a></li>
           </ul>
         </div>
 
+        <!-- Guarantees -->
         <div class="md:col-span-4 space-y-4">
-          <h4 class="text-xs tracking-[0.15em] uppercase font-bold text-stone-400">Quality Policies</h4>
-          <ul class="space-y-2.5 text-xs text-neutral-400 font-light leading-relaxed">
-            <li><strong>120 GSM Stock:</strong> Certified thick-plate bleed-proof paper.</li>
-            <li><strong>Acid-Free Archival:</strong> Pages will not yellow over decades.</li>
-            <li><strong>Anti-AI Mandate:</strong> 100% human linework drafted on plate.</li>
+          <h4 class="text-xs tracking-[0.15em] uppercase font-bold text-[#9D9891]">Quality Guarantees</h4>
+          <ul class="space-y-2.5 text-xs text-[#9D9891] font-light leading-relaxed">
+            <li class="flex items-start gap-2">
+              <span class="text-[#66635F] font-bold">•</span>
+              <span><strong>120 GSM Stock:</strong> Certified thick-plate bleed-proof paper.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#66635F] font-bold">•</span>
+              <span><strong>Acid-Free Archival:</strong> Pages will not yellow over decades.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#66635F] font-bold">•</span>
+              <span><strong>Anti-AI Mandate:</strong> 100% human linework drafted on plate.</span>
+            </li>
           </ul>
         </div>
 
       </div>
 
-      <div class="flex flex-col sm:flex-row items-center justify-between pt-8 text-neutral-500 text-[11px] font-light gap-4">
-        <div>© 2026 Aria Vance Studios. All rights reserved. Registered USA.</div>
+      <div class="flex flex-col sm:flex-row items-center justify-between pt-8 text-[#9D9891] text-[11px] font-light gap-4">
+        <div>
+          © 2026 Aria Vance Studios. All rights reserved. Registered USA.
+        </div>
         <div class="flex items-center gap-4">
-          <span class="hover:text-neutral-300 cursor-pointer">Privacy Policy</span>
+          <span class="hover:text-white cursor-pointer transition-colors">Privacy Policy</span>
           <span>•</span>
-          <span class="hover:text-neutral-300 cursor-pointer">Terms of Service</span>
+          <span class="hover:text-white cursor-pointer transition-colors">Terms of Service</span>
+          <span>•</span>
+          <span class="hover:text-white cursor-pointer transition-colors font-mono">v1.2.0</span>
         </div>
       </div>
 
     </div>
   </footer>
 
-  <!-- Vanilla JS Interactive Drawer / Modal -->
-  <div id="bookModal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-neutral-950/40 backdrop-blur-sm flex items-center justify-center p-4" onclick="closeBookModal(event)">
-    <div class="bg-white max-w-4xl w-full border border-neutral-200 shadow-2xl relative overflow-hidden" onclick="event.stopPropagation()">
-      <button onclick="hideModal()" class="absolute top-5 right-5 z-20 p-2 text-neutral-400 hover:text-neutral-900 bg-neutral-100 hover:bg-neutral-200/60 rounded-full">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  <!-- Book Specification Modal Block -->
+  <div id="book-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-[#1C1C1C]/40 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-[#FDFCFB] max-w-4xl w-full border border-[#E5E2DD] shadow-2xl relative overflow-hidden rounded-none">
+      
+      <!-- Close button -->
+      <button onclick="closeBookModal()" class="absolute top-5 right-5 z-20 p-2 text-[#9D9891] hover:text-[#1C1C1C] bg-[#F8F6F3] hover:bg-[#E5E2DD]/60 border border-[#E5E2DD] transition-colors duration-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
 
       <div class="grid grid-cols-1 md:grid-cols-12">
-        <div class="md:col-span-5 bg-neutral-50 p-8 border-b md:border-b-0 md:border-r border-neutral-100 flex flex-col justify-center items-center">
-          <div class="relative w-full max-w-[240px] aspect-[3/4] bg-white border border-neutral-200/50 p-3 shadow-md">
-            <img id="modalImg" src="" alt="" class="w-full h-full object-cover">
-            <div class="absolute left-0 top-0 bottom-0 w-2 bg-neutral-950/90 z-10"></div>
+        <!-- Left panel -->
+        <div class="md:col-span-5 bg-[#F8F6F3] p-8 border-b md:border-b-0 md:border-r border-[#E5E2DD] flex flex-col justify-center items-center">
+          <div class="relative w-full max-w-[240px] aspect-[3/4] bg-white border border-[#E5E2DD] p-4 shadow-sm">
+            <img id="modal-image" src="" alt="" class="w-full h-full object-cover" />
+            <div class="absolute left-0 top-0 bottom-0 w-2.5 bg-[#1C1C1C] z-10"></div>
           </div>
-          <p class="font-serif text-sm italic text-neutral-700 mt-6">First Printing Published Volume</p>
+          <div class="mt-6 text-center space-y-1">
+            <p class="text-[10px] tracking-wider uppercase font-bold text-[#9D9891]">Published Volume</p>
+            <p id="modal-year" class="font-serif text-sm italic text-[#4A4744]"></p>
+          </div>
         </div>
 
+        <!-- Right specs panel -->
         <div class="md:col-span-7 p-8 md:p-10 flex flex-col justify-between">
           <div class="space-y-5">
             <div>
-              <span class="text-[10px] tracking-[0.2em] uppercase font-bold text-stone-400 block mb-1">Product Specification</span>
-              <h2 id="modalTitle" class="font-serif text-2xl md:text-3xl text-neutral-950 font-normal leading-tight">Book Title</h2>
-              <p id="modalSubtitle" class="text-sm text-neutral-500 italic mt-1 font-light">Subtitle details</p>
+              <span class="text-[10px] tracking-[0.2em] uppercase font-bold text-[#9D9891] block mb-1">Product Specification</span>
+              <h2 id="modal-title" class="font-serif text-2xl md:text-3xl text-[#1C1C1C] font-normal leading-tight"></h2>
+              <p id="modal-subtitle" class="text-sm text-[#66635F] italic mt-1 font-light"></p>
             </div>
 
-            <p id="modalDesc" class="text-sm text-neutral-600 font-light leading-relaxed">Detailed book summary.</p>
+            <p id="modal-description" class="text-sm text-[#4A4744] font-light leading-relaxed"></p>
 
-            <div class="py-4 border-t border-b border-neutral-100 grid grid-cols-3 gap-4 text-xs font-light">
+            <div class="py-4 border-t border-b border-[#E5E2DD] grid grid-cols-3 gap-4 text-xs font-light">
               <div>
-                <span class="text-neutral-400 block uppercase tracking-wider text-[10px]">Dimensions</span>
-                <strong class="text-neutral-800 font-medium mt-0.5 block">8.5 x 11 in</strong>
+                <span class="text-[#9D9891] block uppercase tracking-wider text-[10px] font-bold">Dimensions</span>
+                <strong class="text-[#1C1C1C] font-semibold mt-0.5 block">8.5 x 11 inches</strong>
               </div>
               <div>
-                <span class="text-neutral-400 block uppercase tracking-wider text-[10px]">Volume Size</span>
-                <strong id="modalPages" class="text-neutral-800 font-medium mt-0.5 block">80 Pages</strong>
+                <span class="text-[#9D9891] block uppercase tracking-wider text-[10px] font-bold">Volume</span>
+                <strong id="modal-pages" class="text-[#1C1C1C] font-semibold mt-0.5 block"></strong>
               </div>
               <div>
-                <span class="text-neutral-400 block uppercase tracking-wider text-[10px]">Paper Stock</span>
-                <strong class="text-neutral-800 font-medium mt-0.5 block">120 GSM Acid-Free</strong>
+                <span class="text-[#9D9891] block uppercase tracking-wider text-[10px] font-bold">Paper Stock</span>
+                <strong class="text-[#1C1C1C] font-semibold mt-0.5 block">120 GSM Acid-Free</strong>
               </div>
             </div>
 
             <div class="space-y-2">
-              <h4 class="text-xs uppercase tracking-wider font-semibold text-neutral-950">Design & Craft Highlights:</h4>
-              <ul class="space-y-1.5 text-xs text-neutral-600 font-light">
-                <li class="flex items-start gap-2"><span class="text-stone-500 font-bold">•</span> Single-sided pages to prevent ink bleed-through</li>
-                <li class="flex items-start gap-2"><span class="text-stone-500 font-bold">•</span> Exquisite hand-drawn original designs by Aria</li>
-                <li class="flex items-start gap-2"><span class="text-stone-500 font-bold">•</span> Heavyweight artist-grade paper ideal for colored pencils and gel pens</li>
-              </ul>
+              <h4 class="text-xs uppercase tracking-wider font-bold text-[#1C1C1C]">Design & Craft Highlights:</h4>
+              <ul id="modal-highlights" class="space-y-1.5 text-xs text-[#4A4744] font-light"></ul>
             </div>
           </div>
 
-          <div class="pt-8 mt-6 border-t border-neutral-100">
-            <p class="text-xs text-neutral-400 uppercase tracking-widest font-semibold mb-3">Buy This Printed Volume From:</p>
+          <!-- Direct buy links in modal -->
+          <div class="pt-8 mt-6 border-t border-[#E5E2DD]">
+            <p class="text-xs text-[#9D9891] uppercase tracking-widest font-bold mb-3">Buy This Printed Volume From:</p>
             <div class="grid grid-cols-2 gap-3">
-              <a href="https://amazon.com" target="_blank" class="bg-neutral-900 hover:bg-neutral-800 text-white font-medium text-xs tracking-wider uppercase py-3.5 px-4 text-center border border-neutral-900 transition-colors duration-200 flex items-center justify-center gap-1.5">
+              <a href="https://amazon.com" target="_blank" rel="noopener noreferrer" class="bg-[#1C1C1C] hover:bg-[#4A4744] text-white font-semibold text-xs tracking-widest uppercase py-3.5 px-4 text-center border border-[#1C1C1C] transition-colors duration-200 flex items-center justify-center gap-1.5">
                 <span>Amazon Store</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2 2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
               </a>
-              <a href="https://etsy.com" target="_blank" class="bg-transparent hover:bg-neutral-50 text-neutral-800 border border-neutral-200 font-medium text-xs tracking-wider uppercase py-3.5 px-4 text-center transition-colors duration-200 flex items-center justify-center gap-1.5">
+              <a href="https://etsy.com" target="_blank" rel="noopener noreferrer" class="bg-transparent hover:bg-[#F8F6F3] text-[#1C1C1C] border border-[#E5E2DD] font-semibold text-xs tracking-widest uppercase py-3.5 px-4 text-center transition-colors duration-200 flex items-center justify-center gap-1.5">
                 <span>Etsy Shop</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2 2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
               </a>
             </div>
           </div>
@@ -582,62 +699,107 @@
     </div>
   </div>
 
+  <!-- Pure JS Engine for Interactive Look Inside Popups -->
   <script>
-    const bookData = [
-      {
-        title: "Enchanted Forest Wonders",
-        subtitle: "A Botanical & Woodland Sanctuary",
-        description: "An immersive journey through thick woodlands, forgotten groves, and quiet forest sanctuaries. Features intricate drawings of hidden wildlife, majestic stags, and sprawling ancient oaks canopying detailed flower beds.",
-        image: "https://picsum.photos/seed/forest/800/1066",
-        pages: "84 Pages"
+    const booksData = {
+      'enchanted-forest': {
+        title: 'Enchanted Forest Wonders',
+        subtitle: 'A Botanical & Woodland Sanctuary',
+        description: 'An immersive journey through thick woodlands, forgotten groves, and quiet forest sanctuaries. Features intricate drawings of hidden wildlife, majestic stags, and sprawling ancient oaks canopying detailed flower beds.',
+        image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=600',
+        pages: '84 Heavy Pages',
+        year: 'First Printing: 2026',
+        highlights: [
+          'Single-sided pages to prevent bleed-through',
+          'Includes 40 hand-drawn high-fidelity original designs',
+          'Printed on acid-free, 120 GSM artist-grade paper',
+          'Suitable for colored pencils, gel pens, and fine-liners'
+        ]
       },
-      {
-        title: "Cosmic Mandalas",
-        subtitle: "Sacred Geometry & Celestial Vistas",
-        description: "Symmetry meets the infinite depth of the night sky. Each mandala blends traditional meditative circular patterns with celestial motifs—crescent moons, orbital rings, elegant starbursts, and cosmic constellations.",
-        image: "https://picsum.photos/seed/cosmic/800/1066",
-        pages: "78 Pages"
+      'cosmic-mandalas': {
+        title: 'Cosmic Mandalas',
+        subtitle: 'Sacred Geometry & Celestial Vistas',
+        description: 'Symmetry meets the infinite depth of the night sky. Each mandala blends traditional meditative circular patterns with celestial motifs—crescent moons, orbital rings, elegant starbursts, and cosmic constellations.',
+        image: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&q=80&w=600',
+        pages: '78 Heavy Pages',
+        year: 'First Printing: 2026',
+        highlights: [
+          'Stunning velvet-matte premium dark-cover paperback',
+          '36 complex mandalas with varying geometric density',
+          'Includes a color testing test-page at the back',
+          'Perfect for stress relief, deep relaxation, and mindfulness'
+        ]
       },
-      {
-        title: "Oceanic Dreams",
-        subtitle: "An Underwater Journey of Ink",
-        description: "Dive beneath the quiet tides into a world of fluid ink. Swim alongside majestic sea turtles, rhythmic schools of fish, twisting coral reefs, and delicate kelp forests designed to capture the weightless peace of the ocean.",
-        image: "https://picsum.photos/seed/oceanic/800/1066",
-        pages: "80 Pages"
+      'oceanic-dreams': {
+        title: 'Oceanic Dreams',
+        subtitle: 'An Underwater Journey of Ink',
+        description: 'Dive beneath the quiet tides into a world of fluid ink. Swim alongside majestic sea turtles, rhythmic schools of fish, twisting coral reefs, and delicate kelp forests designed to capture the weightless peace of the ocean.',
+        image: 'https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&q=80&w=600',
+        pages: '80 Heavy Pages',
+        year: 'First Printing: 2025',
+        highlights: [
+          'Flowing, organic lines inspired by Japanese ink washes',
+          '38 marine-life illustration plates',
+          'Thick, high-opacity bleed-resistant backing sheet included',
+          'Wide margins ideal for framing your completed masterpieces'
+        ]
       },
-      {
-        title: "Secret Garden Botanicals",
-        subtitle: "Delicate Flora & Fluttering Wings",
-        description: "An intimate, close-up study of exotic botany and garden ecosystems. Delicate orchids, curling ivy vines, heavy-headed peonies, and beautifully detailed butterflies waiting to be brought to life with color.",
-        image: "https://picsum.photos/seed/garden/800/1066",
-        pages: "92 Pages"
+      'secret-garden': {
+        title: 'Secret Garden Botanicals',
+        subtitle: 'Delicate Flora & Fluttering Wings',
+        description: 'An intimate, close-up study of exotic botany and garden ecosystems. Delicate orchids, curling ivy vines, heavy-headed peonies, and beautifully detailed butterflies waiting to be brought to life with color.',
+        image: 'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&q=80&w=600',
+        pages: '92 Heavy Pages',
+        year: 'First Printing: 2025',
+        highlights: [
+          'Spiral-bound lay-flat option links included',
+          '44 botanical patterns ranging from broad petals to micro-stems',
+          'Perforated pages for clean and easy tear-out',
+          'Each page includes subtle botanical species labels'
+        ]
       }
-    ];
+    };
 
-    function openBookModal(index) {
-      const book = bookData[index];
-      document.getElementById("modalImg").src = book.image;
-      document.getElementById("modalTitle").innerText = book.title;
-      document.getElementById("modalSubtitle").innerText = book.subtitle;
-      document.getElementById("modalDesc").innerText = book.description;
-      document.getElementById("modalPages").innerText = book.pages;
-      
-      const modal = document.getElementById("bookModal");
-      modal.classList.remove("hidden");
-      document.body.style.overflow = "hidden";
+    function openBookModal(id) {
+      const data = booksData[id];
+      if (!data) return;
+
+      document.getElementById('modal-title').innerText = data.title;
+      document.getElementById('modal-subtitle').innerText = data.subtitle;
+      document.getElementById('modal-description').innerText = data.description;
+      document.getElementById('modal-image').src = data.image;
+      document.getElementById('modal-image').alt = data.title;
+      document.getElementById('modal-pages').innerText = data.pages;
+      document.getElementById('modal-year').innerText = data.year;
+
+      const highlightsList = document.getElementById('modal-highlights');
+      highlightsList.innerHTML = '';
+      data.highlights.forEach(hl => {
+        const li = document.createElement('li');
+        li.className = 'flex items-start gap-2';
+        li.innerHTML = `<span class="text-[#9D9891] font-bold mt-0.5">•</span><span>${hl}</span>`;
+        highlightsList.appendChild(li);
+      });
+
+      const modal = document.getElementById('book-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden'; // Lock background scroll
     }
 
-    function hideModal() {
-      const modal = document.getElementById("bookModal");
-      modal.classList.add("hidden");
-      document.body.style.overflow = "";
+    function closeBookModal() {
+      const modal = document.getElementById('book-modal');
+      modal.classList.remove('flex');
+      modal.classList.add('hidden');
+      document.body.style.overflow = ''; // Unlock scroll
     }
 
-    function closeBookModal(event) {
-      if (event.target.id === "bookModal") {
-        hideModal();
+    // Close on overlay click
+    document.getElementById('book-modal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeBookModal();
       }
-    }
+    });
   </script>
 </body>
 </html>
