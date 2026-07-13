@@ -17,3 +17,16 @@ h1 {
     padding: 20px;
     margin-top: 20px;
 }
+#collections-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+#collections-container > div {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+}
