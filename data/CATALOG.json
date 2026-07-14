@@ -6,21 +6,24 @@
       "id": "floral",
       "name": "Floral Collection",
       "status": "draft",
-      "items_count": 0,
+      "items_count": 1,
+      "description": "Botanical illustrations and floral patterns.",
       "date_added": "2026-07-13"
     },
     {
       "id": "geometric",
       "name": "Geometric Collection",
       "status": "draft",
-      "items_count": 0,
+      "items_count": 1,
+      "description": "Abstract shapes and geometric compositions.",
       "date_added": "2026-07-13"
     },
     {
       "id": "animals",
       "name": "Animals Collection",
       "status": "draft",
-      "items_count": 0,
+      "items_count": 1,
+      "description": "Illustrations of various animal species.",
       "date_added": "2026-07-13"
     }
   ]
