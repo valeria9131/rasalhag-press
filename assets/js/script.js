@@ -1,16 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
     fetch('data/CATALOG.json')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) throw new Error('Ошибка загрузки каталога');
+            return response.json();
+        })
         .then(data => {
             const container = document.getElementById('collections-container');
             data.collections.forEach(col => {
                 const div = document.createElement('div');
-           div.innerHTML = `
-    <h3>${col.name}</h3>
-    <p>${col.description}</p>
-    <small>Items: ${col.items_count}</small>
-`;
+                div.className = 'collection-card'; // Добавили класс для стилизации
+                div.innerHTML = `
+                    <h3>${col.name}</h3>
+                    <p>${col.description || 'Описание отсутствует'}</p>
+                    <small>Предметов: ${col.items_count}</small>
+                `;
                 container.appendChild(div);
             });
-        });
+        })
+        .catch(error => console.error('Ошибка:', error));
 });
