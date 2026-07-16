@@ -82,3 +82,11 @@ h1 {
     color: #888;
     font-size: 0.9rem;
 }
+
+.card-image-placeholder {
+    transition: background-color 0.3s ease;
+}
+
+.collection-card:hover .card-image-placeholder {
+    background-color: #d0d0d0;
+}
