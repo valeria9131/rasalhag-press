@@ -90,3 +90,12 @@ h1 {
 .collection-card:hover .card-image-placeholder {
     background-color: #d0d0d0;
 }
+
+.status-badge {
+    background: #eee;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #555;
+}
