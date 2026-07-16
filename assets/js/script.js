@@ -6,16 +6,17 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .then(data => {
             const container = document.getElementById('collections-container');
-            data.collections.forEach(col => {
-                const div = document.createElement('div');
-                div.className = 'collection-card'; // Добавили класс для стилизации
-                div.innerHTML = `
-                    <h3>${col.name}</h3>
-                    <p>${col.description || 'Описание отсутствует'}</p>
-                    <small>Предметов: ${col.items_count}</small>
-                `;
-                container.appendChild(div);
-            });
+        data.collections.forEach(col => {
+    const div = document.createElement('div');
+    div.className = 'collection-card';
+    div.innerHTML = `
+        <div class="card-image-placeholder">No Image</div>
+        <h3>${col.name}</h3>
+        <p>${col.description || 'Описание отсутствует'}</p>
+        <small>Предметов: ${col.items_count}</small>
+    `;
+    container.appendChild(div);
+});
         })
         .catch(error => console.error('Ошибка:', error));
 });
