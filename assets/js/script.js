@@ -9,12 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
         data.collections.forEach(col => {
     const div = document.createElement('div');
     div.className = 'collection-card';
- div.innerHTML = `
+div.innerHTML = `
     <div class="card-image-placeholder">No Image</div>
     <span class="status-badge">${col.status}</span>
     <h3>${col.name}</h3>
-    <p>${col.description || 'Описание отсутствует'}</p>
-    <small>Предметов: ${col.items_count}</small>
+    <p>${col.description || 'No description available'}</p>
+    <small>Items: ${col.items_count}</small>
+    <button onclick="alert('Navigating to ${col.name}')" class="view-btn">View Collection</button>
 `;
     container.appendChild(div);
 });
