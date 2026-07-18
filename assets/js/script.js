@@ -14,7 +14,10 @@ div.innerHTML = `
     <span class="status-badge">${col.status}</span>
     <h3>${col.name}</h3>
     <p>${col.description || 'No description available'}</p>
-    <small>Items: ${col.items_count}</small>
+    <div class="card-meta">
+        <small>Items: ${col.items_count}</small>
+        <small>Added: ${col.date_added}</small>
+    </div>
     <button onclick="alert('Navigating to ${col.name}')" class="view-btn">View Collection</button>
 `;
     container.appendChild(div);
