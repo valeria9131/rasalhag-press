@@ -99,3 +99,11 @@ h1 {
     text-transform: uppercase;
     color: #555;
 }
+
+.card-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    color: #777;
+    font-size: 0.75rem;
+}
