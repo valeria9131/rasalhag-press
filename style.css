@@ -107,3 +107,11 @@ h1 {
     color: #777;
     font-size: 0.75rem;
 }
+
+.card-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    color: #777;
+    font-size: 0.75rem;
+}
