@@ -119,3 +119,17 @@ h1 {
     color: #777;
     font-size: 0.75rem;
 }
+
+.filter-btn {
+    padding: 8px 16px;
+    margin: 0 5px;
+    background: #f0f0f0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.filter-btn:hover {
+    background: #e0e0e0;
+}
