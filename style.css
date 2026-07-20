@@ -25,6 +25,10 @@ h1 {
     padding: 20px;
     margin-top: 20px;
 }
+<div class="filter-controls text-center my-6">
+    <button onclick="filterCollections('all')" class="filter-btn">All</button>
+    <button onclick="filterCollections('draft')" class="filter-btn">Drafts</button>
+</div>
 #collections-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
