@@ -25,3 +25,14 @@ div.innerHTML = `
         })
         .catch(error => console.error('Ошибка:', error));
 });
+function filterCollections(status) {
+    const container = document.getElementById('collections-container');
+    container.innerHTML = ''; // Очищаем контейнер
+    
+    // Получаем данные (предполагая, что 'catalogData' сохранено глобально после первого fetch)
+    const filtered = status === 'all' 
+        ? catalogData 
+        : catalogData.filter(col => col.status === status);
+        
+    filtered.forEach(renderCollection); // Функция рендеринга одной карточки
+}
