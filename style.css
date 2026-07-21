@@ -148,3 +148,8 @@ h1 {
 .collection-card {
     animation: fadeIn 0.4s ease-out forwards;
 }
+
+.filter-btn.active {
+    background: #1c1c1c;
+    color: #ffffff;
+}
