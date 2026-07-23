@@ -153,3 +153,9 @@ h1 {
     background: #1c1c1c;
     color: #ffffff;
 }
+
+#loader {
+    font-style: italic;
+    letter-spacing: 0.1em;
+    color: #777;
+}
