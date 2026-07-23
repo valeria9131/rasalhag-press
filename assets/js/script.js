@@ -36,3 +36,6 @@ function filterCollections(status) {
         
     filtered.forEach(renderCollection); // Функция рендеринга одной карточки
 }
+
+const loader = document.getElementById('loader');
+if (loader) loader.style.display = 'none';
