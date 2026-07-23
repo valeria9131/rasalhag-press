@@ -39,3 +39,8 @@ function filterCollections(status) {
 
 const loader = document.getElementById('loader');
 if (loader) loader.style.display = 'none';
+
+const counter = document.getElementById('counter');
+if (counter) {
+    counter.innerText = `Showing ${filtered.length} collections`;
+}
