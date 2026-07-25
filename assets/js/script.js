@@ -1,26 +1,31 @@
+// Global array to store catalog data
+let catalogData = [];
+
 document.addEventListener('DOMContentLoaded', () => {
+    // Fetch data from the catalog JSON file
     fetch('data/CATALOG.json')
         .then(response => {
-            if (!response.ok) throw new Error('Ошибка загрузки каталога');
+            if (!response.ok) throw new Error('Failed to load catalog');
             return response.json();
         })
         .then(data => {
+            catalogData = data.collections;
+            
             const container = document.getElementById('collections-container');
-  // Global array to store catalog data
-let catalogData = [];
-
-// Fetch data from the catalog JSON file
-fetch('data/CATALOG.json')
-    .then(response => response.json())
-    .then(data => {
-        catalogData = data.collections;
-        const container = document.getElementById('collections-container');
-        container.innerHTML = ''; // Clear container
-        
-        // Render all collections using the separate function
-        catalogData.forEach(renderCollection);
-    })
-    .catch(error => console.error('Error loading catalog:', error));
+            container.innerHTML = ''; // Clear container
+            
+            // Render all collections
+            catalogData.forEach(renderCollection);
+            
+            // Hide loader once loaded
+            const loader = document.getElementById('loader');
+            if (loader) loader.style.display = 'none';
+            
+            // Update counter
+            updateCounter(catalogData.length);
+        })
+        .catch(error => console.error('Error loading catalog:', error));
+});
 
 // Function to render a single collection card
 function renderCollection(col) {
@@ -40,30 +45,30 @@ function renderCollection(col) {
     `;
     container.appendChild(div);
 }
-    container.appendChild(div);
-}
 
-// Внутри вашего fetch (там, где был цикл):
-data.collections.forEach(renderCollection);
-        })
-        .catch(error => console.error('Ошибка:', error));
-});
+// Function to filter collections based on status
 function filterCollections(status) {
     const container = document.getElementById('collections-container');
-    container.innerHTML = ''; // Очищаем контейнер
+    container.innerHTML = ''; // Clear container
     
-    // Получаем данные (предполагая, что 'catalogData' сохранено глобально после первого fetch)
     const filtered = status === 'all' 
         ? catalogData 
         : catalogData.filter(col => col.status === status);
         
-    filtered.forEach(renderCollection); // Функция рендеринга одной карточки
+    if (filtered.length === 0) {
+        container.innerHTML = '<p class="no-results">No collections found</p>';
+        updateCounter(0);
+        return;
+    }
+    
+    filtered.forEach(renderCollection);
+    updateCounter(filtered.length);
 }
 
-const loader = document.getElementById('loader');
-if (loader) loader.style.display = 'none';
-
-const counter = document.getElementById('counter');
-if (counter) {
-    counter.innerText = `Showing ${filtered.length} collections`;
+// Function to update the items counter
+function updateCounter(count) {
+    const counter = document.getElementById('counter');
+    if (counter) {
+        counter.innerText = `Showing ${count} collections`;
+    }
 }
