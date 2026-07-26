@@ -186,3 +186,7 @@ body {
 #collections-container {
     padding-bottom: 4rem;
 }
+
+.view-btn {
+    cursor: pointer;
+}
