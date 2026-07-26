@@ -182,3 +182,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+#collections-container {
+    padding-bottom: 4rem;
+}
