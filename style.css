@@ -207,3 +207,8 @@ body {
     color: #888;
     font-style: italic;
 }
+
+.filter-btn.active {
+    background: #333;
+    color: #fff;
+}
