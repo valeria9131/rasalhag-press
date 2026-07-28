@@ -212,3 +212,10 @@ body {
     background: #333;
     color: #fff;
 }
+
+#counter {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+    text-align: center;
+}
