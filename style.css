@@ -219,3 +219,10 @@ body {
     margin-bottom: 1rem;
     text-align: center;
 }
+
+.catalog-divider {
+    height: 1px;
+    background-color: #eaeaea;
+    margin: 1.5rem auto;
+    width: 80%;
+}
