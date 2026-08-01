@@ -252,3 +252,10 @@ body {
 .view-btn:hover {
     background: #333;
 }
+
+#collections-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
