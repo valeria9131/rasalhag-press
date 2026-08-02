@@ -259,3 +259,15 @@ body {
     gap: 20px;
     padding: 20px 0;
 }
+
+.card-image-placeholder {
+    height: 160px;
+    background: #f7f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
